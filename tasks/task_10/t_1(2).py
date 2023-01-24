@@ -1,21 +1,22 @@
 lst =  ['Мама', 'МАМА', 'Мама', 'папа', 'ПАПА', 'ДЯдя', 'брАт', 'Дядя', 'Дядя']
 
-def duplic(x):
-    y = 0
+def dublic(q):
+    x = 0
     i = 0
-    dup = [y for i, y in enumerate(x) if i != x.index(y)]
+    dup = [y for i, y in enumerate(q) if i != q.index(y)]
+    for i in range(len(dup)):
+        dup[i] = dup[i].lower()
     return dup
 
-def foo(x):
+def foo(q):
     srt_lst = set()
-    for i in range(len(duplic.dup)):
-        duplic.dup[i] = duplic.dup[i].lower()
     index = 0
-    for index in range(len(x)):
-        if x[index] not in duplic.dup:
-            srt_lst.add(x[index])
+    x = 0
+    for index in range(len(q)):
+        if q[index].lower() not in dublic(q):
+            srt_lst.add(q[index].lower())
     res = list(srt_lst)
     return res
 
-test = filter(lst, foo)
-print(test)
+
+print(foo(lst))
